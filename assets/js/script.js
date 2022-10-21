@@ -19,18 +19,23 @@ function generateComputerChoice() {
     randomNumber = Math.floor(Math.random() * 5) + 1
     if (randomNumber === 1) {
         computerChoice = 'rock'
+        computerChoiceDisplay.setAttribute("src", "assets/images/rock.png");
     }
     if (randomNumber === 2) {
         computerChoice = 'paper'
+        computerChoiceDisplay.setAttribute("src", "assets/images/paper.png")
     }
     if (randomNumber === 3) {
         computerChoice = 'scissors'
+        computerChoiceDisplay.setAttribute("src", "assets/images/scissors.jpeg");
     }
     if (randomNumber === 4) {
         computerChoice = 'lizard'
+        computerChoiceDisplay.setAttribute("src", "assets/images/lizard.png");
     }
     if (randomNumber === 5) {
         computerChoice = 'spock'
+        computerChoiceDisplay.setAttribute("src", "assets/images/spock.jpeg");
     }
     computerChoiceDisplay.innerHTML = computerChoice
 }
