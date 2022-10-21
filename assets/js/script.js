@@ -116,3 +116,7 @@ function getResult() {
     }
     resultDisplay.innerHTML = result
 }
+
+//increment score for computer and player
+
+// set images for each button

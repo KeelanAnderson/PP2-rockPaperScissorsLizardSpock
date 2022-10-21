@@ -19,6 +19,7 @@ h1{
     width: 33%;
     height: 450px;
     text-align: center;
+    position: relative;
 
 }
 
@@ -29,6 +30,7 @@ h1{
     width: 33%;
     height: 450px;
     text-align: center;
+    position: relative;
 }
 
 #result-display {
@@ -39,4 +41,13 @@ h1{
 
 #game-buttons {
     text-align: center;
+    margin-bottom: 30px;
+}
+
+.score {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    
 }
