@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightseagreen;
+}
+
+h1{
+    text-align: center;
+    margin: 30px 0;
+}
+
+#computer {
+    float: right;
+    margin-right: 10%;
+    background-color: blue;
+    width: 33%;
+    height: 450px;
+    text-align: center;
+
+}
+
+#player {
+    float: left;
+    margin-left: 10%;
+    background-color: blue;
+    width: 33%;
+    height: 450px;
+    text-align: center;
+}
+
+#result-display {
+    clear: both;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#game-buttons {
+    text-align: center;
+}
