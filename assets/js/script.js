@@ -9,7 +9,7 @@ let result;
 gameButtons.forEach(gameButton => gameButton.addEventListener('click', (e) => {
     userChoice = e.target.id
     playerChoiceDisplay.innerHTML = userChoice
-    console.log(gameButton)
+    playerChoiceDisplay.setAttribute("src", `assets/images/${e.target.id}-image.png`) // sets the images for players choice
     generateComputerChoice()
     getResult()
 
@@ -19,23 +19,23 @@ function generateComputerChoice() {
     randomNumber = Math.floor(Math.random() * 5) + 1
     if (randomNumber === 1) {
         computerChoice = 'rock'
-        computerChoiceDisplay.setAttribute("src", "assets/images/rock.png");
+        computerChoiceDisplay.setAttribute("src", "assets/images/rock-image.png"); // sets the image for computer choice
     }
     if (randomNumber === 2) {
         computerChoice = 'paper'
-        computerChoiceDisplay.setAttribute("src", "assets/images/paper.png")
+        computerChoiceDisplay.setAttribute("src", "assets/images/paper-image.png")
     }
     if (randomNumber === 3) {
         computerChoice = 'scissors'
-        computerChoiceDisplay.setAttribute("src", "assets/images/scissors.jpeg");
+        computerChoiceDisplay.setAttribute("src", "assets/images/scissors-image.png");
     }
     if (randomNumber === 4) {
         computerChoice = 'lizard'
-        computerChoiceDisplay.setAttribute("src", "assets/images/lizard.png");
+        computerChoiceDisplay.setAttribute("src", "assets/images/lizard-image.png");
     }
     if (randomNumber === 5) {
         computerChoice = 'spock'
-        computerChoiceDisplay.setAttribute("src", "assets/images/spock.jpeg");
+        computerChoiceDisplay.setAttribute("src", "assets/images/spock-image.png");
     }
     computerChoiceDisplay.innerHTML = computerChoice
 }
@@ -63,7 +63,7 @@ function getResult() {
     // you chose paper outcomes
 
     if (userChoice === 'paper' && computerChoice === 'rock') {
-        result = "Paper covers Rock<br>YOU Win"
+        result = "Paper covers Rock<br>YOU WIN"
     }
     if (userChoice === 'paper' && computerChoice === 'scissors') {
         result = "Scissors cuts Paper<br>YOU LOSE"
@@ -72,7 +72,7 @@ function getResult() {
         result = "Lizard eats Paper<br>YOU LOSE"
     }
     if (userChoice === 'paper' && computerChoice === 'spock') {
-        result = "Paper disproves Spock<br>YOU WiN"
+        result = "Paper disproves Spock<br>YOU WIN"
     }
 
     // you choose scissors outcomes
@@ -124,4 +124,3 @@ function getResult() {
 
 //increment score for computer and player
 
-// set images for each button
