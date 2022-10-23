@@ -12,6 +12,29 @@ h1{
     margin: 30px 0;
 }
 
+/* menu page */
+
+#menu {
+    text-align: center;
+    display: block;
+    
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+.list {
+
+    display: block;
+
+    margin: 10px;
+    padding: 10px;
+    font-size: large;
+}
+
+/* game page */
+
 #computer {
     float: right;
     margin-right: 10%;

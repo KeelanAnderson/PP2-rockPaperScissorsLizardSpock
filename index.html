@@ -12,34 +12,22 @@
 
 <body>
     <h1>rockPaperScissorsLizardSpock</h1>
-    
-    <div id="game-buttons">
-        <p>Controls: </p>
-        <br>
-        <button class="button" id="rock">Rock</button>
-        <button class="button" id="paper">Paper</button>
-        <button class="button" id="scissors">Scissors</button>
-        <button class="button" id="lizard">Lizard</button>
-        <button class="button" id="spock">Spock</button>
+    <div>
+        <div id="menu">
+            <h2>Game Modes</h2>
+            <ul>
+                <li class="list" id="best-of-three list">Best of 3</li>
+                <li class="list" id="best-of-five list">Best of 5</li>
+                <li class="list" id="first-to-ten list">First to 10</li>
+                <li class="list" id="unlimited list">Unlimited</li>
+            </ul>
+
+            <h2 id="rules">RULES</h2>
+
+            <a href="game.html">Unlimited game</a>
+            
+        </div>
     </div>
-
-    <div id="computer">
-        <p>Computer Choice:</p>
-        <img id="computer-choice"></img>
-        <p class="score">Computer Score: <span id="computer-score">0</span></p>
-    </div>
-
-    <div id="player">
-        <p>Player Choice:</p>
-        <img id="player-choice"></img>
-        <p class="score">Player Score: <span id="player-score">0</span></p>
-    </div>
-
-    <div id="result-display">
-        <div id="result"></div>
-    </div>
-
-
     <script src="assets/js/script.js"></script>
 </body>
 
