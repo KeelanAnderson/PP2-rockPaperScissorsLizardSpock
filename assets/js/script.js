@@ -7,6 +7,17 @@ let computerChoice;
 let result;
 let randomNumber;
 
+const bestOfThree = document.getElementById('best-of-three');
+const bestOfFive = document.getElementById('best-of-five');
+const firstToTen = document.getElementById('first-to-ten');
+
+let playerScore;
+let computerScore;
+
+bestOfThree.addEventListener('click', endBestOfThree());
+bestOfFive.addEventListener('click', endBestOfFive());
+firstToTen.addEventListener('click', endFirstToTen());
+
 gameButtons.forEach(gameButton => gameButton.addEventListener('click', (e) => {
     userChoice = e.target.id;
     playerChoiceDisplay.innerHTML = userChoice;
@@ -159,3 +170,37 @@ function incrementComputerScore() {
     let computerScore = parseInt(document.getElementById('computer-score').innerText);
     document.getElementById('computer-score').innerText = ++computerScore;
 }
+
+// game mode functions
+
+// function endBestOfThree() {
+//     if(playerScore === 2) {
+//         endGame();
+//     }
+//     if(computerScore === 2) {
+//         endGame();
+//     }   
+// }
+
+// function endBestOfFive() {
+//     if(playerScore === 3) {
+//         endGame();
+//     }
+//     if(computerScore === 3) {
+//         endGame();
+//     }   
+// }
+
+// function endFirstToTen() {
+//     if(playerScore === 10) {
+//         endGame();
+//     }
+//     if(computerScore === 10) {
+//         endGame();
+//     }   
+// }
+
+// function endGame() {
+//     console.log('game over');
+//     // gameover page pops up
+// }

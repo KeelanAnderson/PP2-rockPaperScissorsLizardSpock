@@ -74,3 +74,23 @@ h2 {
     left: 40%;
     
 }
+
+#quit {
+    float:right;
+}
+
+/* game over page */
+
+#end-page {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.game-over-btn {
+    margin: 10px 0;
+    padding: 10px;
+
+}
