@@ -3,20 +3,28 @@ const playerChoiceDisplay = document.getElementById('player-choice');
 const resultDisplay = document.getElementById('result');
 const gameButtons = document.querySelectorAll('button');
 let userChoice;
-let computerChoice;
+let computerChoice = ['rock', 'paper', 'scissors', 'lizard', 'spock']
 let result;
 let randomNumber;
 
-const bestOfThree = document.getElementById('best-of-three');
-const bestOfFive = document.getElementById('best-of-five');
-const firstToTen = document.getElementById('first-to-ten');
+let playerScore = 0;
+let computerScore = 0;
 
-let playerScore;
-let computerScore;
 
-bestOfThree.addEventListener('click', endBestOfThree());
-bestOfFive.addEventListener('click', endBestOfFive());
-firstToTen.addEventListener('click', endFirstToTen());
+
+function checkIfPlayerWins(userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
+        result = "IT'S A DRAW";
+    }
+}
+
+function openGame() {
+    window.location.href = "game.html"
+}
+
+function endGame() {
+    window.location.href = "gameover.html"
+}
 
 gameButtons.forEach(gameButton => gameButton.addEventListener('click', (e) => {
     userChoice = e.target.id;
@@ -28,36 +36,39 @@ gameButtons.forEach(gameButton => gameButton.addEventListener('click', (e) => {
 }));
 
 function generateComputerChoice() {
-    randomNumber = Math.floor(Math.random() * 5) + 1;
-    if (randomNumber === 1) {
-        computerChoice = 'rock';
-        computerChoiceDisplay.setAttribute("src", "assets/images/rock-image.png"); // sets the image for computer choice
-        computerChoiceDisplay.setAttribute("alt", "rock");
-    }
-    if (randomNumber === 2) {
-        computerChoice = 'paper';
-        computerChoiceDisplay.setAttribute("src", "assets/images/paper-image.png");
-        computerChoiceDisplay.setAttribute("alt", "paper");
-    }
-    if (randomNumber === 3) {
-        computerChoice = 'scissors';
-        computerChoiceDisplay.setAttribute("src", "assets/images/scissors-image.png");
-        computerChoiceDisplay.setAttribute("alt", "scissors");
-    }
-    if (randomNumber === 4) {
-        computerChoice = 'lizard';
-        computerChoiceDisplay.setAttribute("src", "assets/images/lizard-image.png");
-        computerChoiceDisplay.setAttribute("alt", "lizard");
-    }
-    if (randomNumber === 5) {
-        computerChoice = 'spock';
-        computerChoiceDisplay.setAttribute("src", "assets/images/spock-image.png");
-        computerChoiceDisplay.setAttribute("alt", "spock");
-    }
-    computerChoiceDisplay.innerHTML = computerChoice;
+    randomNumber = Math.floor(Math.random() * 5);
+    computerChoiceDisplay.innerHTML = computerChoice[randomNumber]
+    computerChoiceDisplay.setAttribute("src", `assets/images/${computerChoice[randomNumber]}-image.png`); // sets the image for computer choice
+    computerChoiceDisplay.setAttribute("alt", `${computerChoice[randomNumber]}`); //sets alt text for image for computer choice
+
+    // if (randomNumber === 1) {
+    //     computerChoice = 'rock';
+
+    // }
+    // if (randomNumber === 2) {
+    //     computerChoice = 'paper';
+    //     computerChoiceDisplay.setAttribute("src", "assets/images/paper-image.png");
+    //     computerChoiceDisplay.setAttribute("alt", "paper");
+    // }
+    // if (randomNumber === 3) {
+    //     computerChoice = 'scissors';
+    //     computerChoiceDisplay.setAttribute("src", "assets/images/scissors-image.png");
+    //     computerChoiceDisplay.setAttribute("alt", "scissors");
+    // }
+    // if (randomNumber === 4) {
+    //     computerChoice = 'lizard';
+    //     computerChoiceDisplay.setAttribute("src", "assets/images/lizard-image.png");
+    //     computerChoiceDisplay.setAttribute("alt", "lizard");
+    // }
+    // if (randomNumber === 5) {
+    //     computerChoice = 'spock';
+    //     computerChoiceDisplay.setAttribute("src", "assets/images/spock-image.png");
+    //     computerChoiceDisplay.setAttribute("alt", "spock");
+    // }
+    // computerChoiceDisplay.innerHTML = computerChoice;
 }
 
-function getResult() {
+function getResultTwo() {
     if (userChoice === computerChoice) {
         result = "IT'S A DRAW";
     }
@@ -159,6 +170,32 @@ function getResult() {
     resultDisplay.innerHTML = result;
 }
 
+winnersAndLosers = {
+    'rock': ['scissors', 'lizard'],
+    'paper': ['rock', 'spock'],
+    'scissors': ['paper', 'lizard'],
+    'lizard': ['paper', 'spock'],
+    'spock': ['scissors', 'rock'],
+}
+
+function getResult(userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
+        result = "IT'S A DRAW";
+    }
+    losers = winnerAndLosers.userChoice
+    result = loserArray.includes(computerChoice)
+    if (result == true) {
+        return 'player wins'
+    } 
+    else {
+        return 'computer wins'
+    }
+}
+
+
+
+
+
 //increment score for computer and player
 
 function incrementPlayerScore() {
@@ -172,35 +209,3 @@ function incrementComputerScore() {
 }
 
 // game mode functions
-
-// function endBestOfThree() {
-//     if(playerScore === 2) {
-//         endGame();
-//     }
-//     if(computerScore === 2) {
-//         endGame();
-//     }   
-// }
-
-// function endBestOfFive() {
-//     if(playerScore === 3) {
-//         endGame();
-//     }
-//     if(computerScore === 3) {
-//         endGame();
-//     }   
-// }
-
-// function endFirstToTen() {
-//     if(playerScore === 10) {
-//         endGame();
-//     }
-//     if(computerScore === 10) {
-//         endGame();
-//     }   
-// }
-
-// function endGame() {
-//     console.log('game over');
-//     // gameover page pops up
-// }
