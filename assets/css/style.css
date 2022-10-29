@@ -65,6 +65,7 @@ h2 {
 #game-buttons {
     text-align: center;
     margin-bottom: 30px;
+
 }
 
 .score {
@@ -93,4 +94,13 @@ h2 {
     margin: 10px 0;
     padding: 10px;
 
+}
+
+.selection{
+    background-color: yellow;
+    color: black;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    margin: 5px;
 }
