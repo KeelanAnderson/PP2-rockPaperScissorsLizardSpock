@@ -15,6 +15,14 @@ function openRules() {
     window.location.href = "rules.html"
 }
 
+function openMenu() {
+    window.location.href = "index.html"
+}
+
+function endGame() {
+    window.location.href = "gameover.html"
+}
+
 gameButtons.forEach(gameButton => gameButton.addEventListener('click', (e) => {
     userChoice = e.target.dataset;
     playerChoiceDisplay.setAttribute("src", `assets/images/${e.target.id}-image.png`); // sets the images for players choice

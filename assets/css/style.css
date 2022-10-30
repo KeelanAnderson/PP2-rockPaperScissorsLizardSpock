@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +7,10 @@
 
 body {
     background-color: lightseagreen;
+    font-family: 'Comfortaa', cursive;
 }
 
-h1{
+h1 {
     text-align: center;
     margin: 30px 0;
 }
@@ -17,7 +20,7 @@ h1{
 #menu {
     text-align: center;
     display: block;
-    
+
 }
 
 h2 {
@@ -30,20 +33,22 @@ h2 {
 
     display: block;
 
-    margin: 10px;
+    margin: 50px 0;
     padding: 10px;
     font-size: large;
-    
-   
+
+
 }
 
-.game-mode-btn{
+.game-mode-btn {
     background-color: yellow;
     color: black;
-    padding: 10px;
+    padding: 25px;
     width: 33%;
     border-radius: 50%;
     font-size: 5rem;
+    display:
+
 }
 
 /* game page */
@@ -86,11 +91,11 @@ h2 {
     position: absolute;
     bottom: 0;
     left: 40%;
-    
+
 }
 
 #quit {
-    float:right;
+    float: right;
 }
 
 /* game over page */
@@ -109,7 +114,7 @@ h2 {
 
 }
 
-.selection{
+.selection {
     background-color: yellow;
     color: black;
     padding: 10px;
@@ -121,6 +126,24 @@ h2 {
 
 /* rules page */
 
+#exit-rules {
+    width: 25px;
+    height: 25px;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 10px;
+    text-align: center;
+
+}
+
+.go-back {
+    text-align: right;
+    font-weight: bold;
+    margin: 0 20px 20px 0;
+}
+
 #rules-intro {
     margin: 20px 50px 50px;
     font-size: 1.5rem;
@@ -131,5 +154,14 @@ h2 {
     margin: 20px 50px;
     list-style-type: none;
     font-size: 1.75rem;
+    width: 33%;
     text-align: center;
+    float: right;
+    margin-right: 8%
+}
+
+#rules-diagram {
+    width: 600px;
+    height: auto;
+    margin-left: 8%;
 }
