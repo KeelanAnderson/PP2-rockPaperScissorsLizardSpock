@@ -32,8 +32,7 @@ h2 {
 .list {
 
     display: block;
-
-    margin: 50px 0;
+    margin: 5.5%;
     padding: 10px;
     font-size: large;
 
@@ -43,15 +42,23 @@ h2 {
 .game-mode-btn {
     background-color: yellow;
     color: black;
-    padding: 25px;
+    padding: 3%;
     width: 33%;
     border-radius: 50%;
     font-size: 5rem;
-    display:
 
 }
 
 /* game page */
+
+.selection {
+    background-color: yellow;
+    color: black;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    margin: 5px;
+}
 
 #computer {
     float: right;
@@ -109,32 +116,6 @@ h2 {
     float: right;
 }
 
-/* game over page */
-
-#end-page {
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.game-over-btn {
-    margin: 10px 0;
-    padding: 10px;
-
-}
-
-.selection {
-    background-color: yellow;
-    color: black;
-    padding: 10px;
-    border-radius: 50%;
-    border: none;
-    margin: 5px;
-}
-
-
 /* rules page */
 
 #exit-rules {
@@ -175,4 +156,11 @@ h2 {
     width: 600px;
     height: auto;
     margin-left: 8%;
+}
+
+/* game over page */
+
+#end-page {
+    text-align: center;
+
 }

@@ -13,9 +13,13 @@
 <body>
     <h1>rockPaperScissorsLizardSpock</h1>
     <div id="end-page">
-        <button class="game-over-btn" id="restart-button">Restart</button>
-        <button class="game-over-btn" id="return-button">Go Back To Menu</button>
+
+        <ul>
+            <li onclick="openGame()" class="list" id="restart-button"><span class="game-mode-btn">Restart</span></li>
+            <li onclick="openMenu()" class="list" id="quit-button"><span class="game-mode-btn">Menu</span></li>
+        </ul>
     </div>
+
     <script src="assets/js/script.js"></script>
 </body>
 
