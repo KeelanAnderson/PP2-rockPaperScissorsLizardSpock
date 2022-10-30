@@ -7,6 +7,9 @@ let userChoice;
 let computerChoice;
 let result;
 
+
+
+
 function openGame() {
     window.location.href = "game.html"
 }
@@ -52,14 +55,14 @@ function getResult() {
     beatenArray = options[userChoice.selection];
     let answer = beatenArray.includes(computerChoice);
     if (answer == true) {
-        result = 'You Win';
+        result = 'You Win!';
         incrementPlayerScore();
     } else if (answer == false) {
-        result = 'You Lose';
+        result = 'You Lose!';
         incrementComputerScore();
     }
     if (computerChoice === userChoice.selection) {
-        result = "its a draw";
+        result = "It's A Draw!";
     }
     resultDisplay.innerHTML = result;
 }
@@ -74,4 +77,15 @@ function incrementPlayerScore() {
 function incrementComputerScore() {
     let computerScore = parseInt(document.getElementById('computer-score').innerText);
     document.getElementById('computer-score').innerText = ++computerScore;
+}
+
+// best of three game
+
+
+
+function bestOfThree () {
+    if (document.getElementById('computer-score').innerText == 2 || document.getElementById('player-score').innerText == 2) {
+        endGame();
+    }
+    
 }
