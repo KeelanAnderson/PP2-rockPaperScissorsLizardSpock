@@ -7,6 +7,14 @@ let userChoice;
 let computerChoice;
 let result;
 
+function openGame() {
+    window.location.href = "game.html"
+}
+
+function openRules() {
+    window.location.href = "rules.html"
+}
+
 gameButtons.forEach(gameButton => gameButton.addEventListener('click', (e) => {
     userChoice = e.target.dataset;
     playerChoiceDisplay.setAttribute("src", `assets/images/${e.target.id}-image.png`); // sets the images for players choice
@@ -42,7 +50,7 @@ function getResult() {
         result = 'You Lose';
         incrementComputerScore();
     }
-    else (computerChoice === userChoice.selection) {
+    if (computerChoice === userChoice.selection) {
         result = "its a draw";
     }
     resultDisplay.innerHTML = result;
