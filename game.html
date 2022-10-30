@@ -12,7 +12,7 @@
 
 <body>
     <h1>rockPaperScissorsLizardSpock</h1>
-    
+
     <div id="game-buttons">
         <p>Controls: </p>
         <br>
@@ -25,13 +25,13 @@
 
     <div id="computer">
         <p>Computer Choice:</p>
-        <img id="computer-choice"></img>
+        <div class="container"><img class="game-img" id="computer-choice"></img></div>
         <p class="score">Computer Score: <span id="computer-score">0</span></p>
     </div>
 
     <div id="player">
         <p>Player Choice:</p>
-        <img id="player-choice"></img>
+        <div class="container"><img class="game-img" id="player-choice"></img></div>
         <p class="score">Player Score: <span id="player-score">0</span></p>
     </div>
 
@@ -39,9 +39,10 @@
         <div id="result"></div>
     </div>
 
-    <a id="quit" href="index.html">Go To Menu</a>
+    <p onclick="openMenu()" class="go-back">Exit Game<i class="fa-solid fa-arrow-left-long"></i></p>
 
     <script src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/5bd47d0323.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

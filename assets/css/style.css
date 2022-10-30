@@ -56,7 +56,6 @@ h2 {
 #computer {
     float: right;
     margin-right: 10%;
-    /* background-color: blue; */
     width: 33%;
     height: 450px;
     text-align: center;
@@ -67,11 +66,23 @@ h2 {
 #player {
     float: left;
     margin-left: 10%;
-    /* background-color: blue; */
     width: 33%;
     height: 450px;
     text-align: center;
     position: relative;
+}
+
+.game-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+
+}
+
+.container {
+    margin-top: 5%;
+    width: 100%;
+    height: 80%;
 }
 
 #result-display {
