@@ -186,7 +186,7 @@ h2 {
 /* for large to medium screen sizes from 1100px wide and down */
 
 @media only screen and (max-width: 1100px) {
-    
+
     h2 {
         margin: 20px 0 20px;
     }
@@ -246,5 +246,12 @@ h2 {
 
 
 
+
+}
+
+#game-result {
+    font-size: 3vw;
+    text-align: center;
+    margin-bottom: 5%;
 
 }

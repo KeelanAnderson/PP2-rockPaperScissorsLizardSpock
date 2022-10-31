@@ -33,6 +33,7 @@ gameButtons.forEach(gameButton => gameButton.addEventListener('click', (e) => {
     userChoice = e.target.dataset;
     playerChoiceDisplay.setAttribute("src", `assets/images/${e.target.id}-image.png`); // sets the images for players choice
     getResult();
+    bestOfThree();
 }));
 
 function generateComputerChoice() {
@@ -83,10 +84,15 @@ function incrementComputerScore() {
 
 // best of three game
 
-
-
 function bestOfThree() {
-    if (document.getElementById('computer-score').innerText == 2 || document.getElementById('player-score').innerText == 2) {
+    let gameResult = document.getElementById('game-result');
+    if (document.getElementById('computer-score').innerText == 2) {
+        gameResult.textContent = 'You Lost, Try Again!';
+        endGame();
+        
+    }
+    else if(document.getElementById('player-score').innerText == 2) {
+        gameResult.textContent = 'Congatulations, You Won!';
         endGame();
     }
 
