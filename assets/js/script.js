@@ -6,13 +6,13 @@ let computerChoiceOptions = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 let userChoice;
 let computerChoice;
 let result;
-
-
-
+let gameOver = document.getElementById('end-section');
+gameOver.hidden = true;
 
 function openGame() {
     window.location.href = "game.html";
 }
+
 
 function openRules() {
     window.location.href = "rules.html";
@@ -23,7 +23,10 @@ function openMenu() {
 }
 
 function endGame() {
-    window.location.href = "gameover.html";
+    let gameOn = document.getElementById('game-section');
+    gameOn.hidden = true;
+    let gameOver = document.getElementById('end-section');
+    gameOver.hidden = false;
 }
 
 gameButtons.forEach(gameButton => gameButton.addEventListener('click', (e) => {
@@ -52,16 +55,17 @@ function getResult() {
     generateComputerChoice();
     beatenArray = options[userChoice.selection];
     let answer = beatenArray.includes(computerChoice);
-    if (answer == true) {
+    if (computerChoice == userChoice.selection) {
+        result = "It's A Draw!";
+    }
+    else if (answer == true) {
         result = 'You Win!';
         incrementPlayerScore();
     } else if (answer == false) {
         result = 'You Lose!';
         incrementComputerScore();
     }
-    if (computerChoice === userChoice.selection) {
-        result = "It's A Draw!";
-    }
+    
     resultDisplay.innerHTML = result;
 }
 
@@ -81,9 +85,9 @@ function incrementComputerScore() {
 
 
 
-function bestOfThree () {
+function bestOfThree() {
     if (document.getElementById('computer-score').innerText == 2 || document.getElementById('player-score').innerText == 2) {
         endGame();
     }
-    
+
 }
