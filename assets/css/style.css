@@ -24,11 +24,6 @@ h1 {
 
 }
 
-h2 {
-    margin: 20px 0;
-    text-align: center;
-    font-size: 2vw;
-}
 
 .list {
     display: block;
@@ -128,10 +123,17 @@ h2 {
 
 /* rules page */
 
+h2 {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 3vw;
+}
+
+
 #exit-rules {
     width: 25px;
     height: 25px;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     position: absolute;
     top: 0px;
     right: 0px;
@@ -143,29 +145,32 @@ h2 {
 .go-back {
     text-align: right;
     font-weight: bold;
-    margin: 0 20px 20px 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    clear: both;
 }
 
 #rules-intro {
     margin: 20px 50px 50px;
-    font-size: 1.5rem;
+    font-size: 2vw;
 
 }
 
 #rules-list {
     margin: 20px 50px;
     list-style-type: none;
-    font-size: 1.75rem;
-    width: 33%;
+    font-size: 1.75vw;
+    min-width: 40%;
     text-align: center;
     float: right;
     margin-right: 8%
 }
 
 #rules-diagram {
-    width: 600px;
+    max-width: 40%;
     height: auto;
     margin-left: 8%;
+    margin-bottom: 40px;
 }
 
 /* game over page */
@@ -181,12 +186,41 @@ h2 {
 /* for large to medium screen sizes from 1100px wide and down */
 
 @media only screen and (max-width: 1100px) {
+    
+    h2 {
+        margin: 20px 0 20px;
+    }
 
+    #rules-intro {
+        margin: 0 8% 10px;
+    }
+
+    #rules-diagram {
+        float: none;
+        max-width: 80%;
+        margin: 0 10%;
+    }
+
+
+    #rules-list {
+        float: none;
+        font-size: 4vw;
+
+    }
+
+    .go-back {
+        font-size: 3vw;
+    }
 }
 
 /* for medium to small screen sizes from 950px wide and down */
 
 @media only screen and (max-width: 950px) {
+    h1 {
+        font-size: 5vw;
+        margin-bottom: 3%;
+    }
+
     .mediaquery {
         font-size: 2vw;
     }
@@ -199,9 +233,7 @@ h2 {
 /* for small screens 550px wide and down */
 
 @media only screen and (max-width: 550px) {
-    h1 {
-        font-size: 5vw;
-    }
+
 
     .mediaquery {
         font-size: 3vw;
@@ -210,6 +242,8 @@ h2 {
     .score {
         font-size: 3vw;
     }
+
+
 
 
 

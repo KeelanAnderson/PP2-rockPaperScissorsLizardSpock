@@ -11,19 +11,19 @@ let result;
 
 
 function openGame() {
-    window.location.href = "game.html"
+    window.location.href = "game.html";
 }
 
 function openRules() {
-    window.location.href = "rules.html"
+    window.location.href = "rules.html";
 }
 
 function openMenu() {
-    window.location.href = "index.html"
+    window.location.href = "index.html";
 }
 
 function endGame() {
-    window.location.href = "gameover.html"
+    window.location.href = "gameover.html";
 }
 
 gameButtons.forEach(gameButton => gameButton.addEventListener('click', (e) => {
@@ -38,8 +38,6 @@ function generateComputerChoice() {
     computerChoiceDisplay.setAttribute("src", `assets/images/${computerChoiceOptions[randomNumber]}-image.png`); // sets the image for computer choice
     computerChoiceDisplay.setAttribute("alt", `${computerChoiceOptions[randomNumber]}`); //sets alt text for image for computer choice
     computerChoice = computerChoiceOptions[randomNumber];
-
-
 }
 
 const options = {
