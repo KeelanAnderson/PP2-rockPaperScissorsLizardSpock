@@ -6,8 +6,6 @@ let computerChoiceOptions = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 let userChoice;
 let computerChoice;
 let result;
-let gameOver = document.getElementById('end-section');
-gameOver.hidden = true;
 
 function openGame() {
     window.location.href = "game.html";
@@ -26,15 +24,18 @@ function endGame() {
     let gameOn = document.getElementById('game-section');
     gameOn.hidden = true;
     let gameOver = document.getElementById('end-section');
-    gameOver.hidden = false;
+    gameOver.classList.remove('hide')
 }
+
 
 gameButtons.forEach(gameButton => gameButton.addEventListener('click', (e) => {
     userChoice = e.target.dataset;
     playerChoiceDisplay.setAttribute("src", `assets/images/${e.target.id}-image.png`); // sets the images for players choice
+    playerChoiceDisplay.setAttribute("alt", `${e.target.id}`); // sets the alt text for images for players choice
     getResult();
-    bestOfThree();
+    bestOfFive();
 }));
+
 
 function generateComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 5);
@@ -58,15 +59,14 @@ function getResult() {
     let answer = beatenArray.includes(computerChoice);
     if (computerChoice == userChoice.selection) {
         result = "It's A Draw!";
-    }
-    else if (answer == true) {
+    } else if (answer == true) {
         result = 'You Win!';
         incrementPlayerScore();
     } else if (answer == false) {
         result = 'You Lose!';
         incrementComputerScore();
     }
-    
+
     resultDisplay.innerHTML = result;
 }
 
@@ -82,16 +82,15 @@ function incrementComputerScore() {
     document.getElementById('computer-score').innerText = ++computerScore;
 }
 
-// best of three game
+// best of three 
 
-function bestOfThree() {
+function bestOfFive() {
     let gameResult = document.getElementById('game-result');
-    if (document.getElementById('computer-score').innerText == 2) {
+    if (document.getElementById('computer-score').innerText == 3) {
         gameResult.textContent = 'You Lost, Try Again!';
         endGame();
-        
-    }
-    else if(document.getElementById('player-score').innerText == 2) {
+
+    } else if (document.getElementById('player-score').innerText == 3) {
         gameResult.textContent = 'Congatulations, You Won!';
         endGame();
     }

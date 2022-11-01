@@ -141,6 +141,7 @@ h2 {
     right: 0px;
     margin: 10px;
     text-align: center;
+    cursor: pointer;
 
 }
 
@@ -150,6 +151,7 @@ h2 {
     margin-right: 10px;
     margin-bottom: 10px;
     clear: both;
+    cursor: pointer;
 }
 
 #rules-intro {
@@ -177,8 +179,19 @@ h2 {
 
 /* game over page */
 
+.hide {
+    display: none;
+}
+
 #end-page {
     text-align: center;
+
+}
+
+#game-result {
+    font-size: 3vw;
+    text-align: center;
+    margin-bottom: 5%;
 
 }
 
@@ -251,9 +264,3 @@ h2 {
 
 }
 
-#game-result {
-    font-size: 3vw;
-    text-align: center;
-    margin-bottom: 5%;
-
-}
