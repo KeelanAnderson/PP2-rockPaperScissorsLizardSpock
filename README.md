@@ -104,7 +104,9 @@ I also analysed my project on lighthouse in dev tools.
 
 - The most complex function has a cyclomatic complexity value of 4 while the median is 1.
 
+### Bugs
 
+This project was alot more challenging the my first Project. The javaScript language is very complex and the syntax can be very confusing at times making it very intimidating when starting off. At first in my project the functions i used to get my results and computer choice were all done using multiple if statements. My get result function had 21 if statements and the computer choice had 5. When talking to my mentor we decided I could come up with a better way to do this. my mentor guided me with some links to a few website containing information about data structures. I set about make my function and it was very challenging at the beginning and after a few days I made a breakthrough and got it to work. this was a bug in the new if else statement that was incrementing the computer score whenever there was a draw. to fix this a had to rearrange my if statement and use 'if else' statements instead of 'else' and this fixed the problem immediately.
 
 ### Unfixed Bugs
 
@@ -138,6 +140,8 @@ examples
 
 https://stackoverflow.com/ was fundamental in helping my to build a data structure and the getResult function in my project.
 
+- The Love Maths project and Ultimate rock, paper, scissors from CodeInstitute helped with my project. The love maths project helped me with my function for incrementing the scores.
+
 #### Validators
 
 - https://jshint.com/ for JavaScript
@@ -146,12 +150,11 @@ https://stackoverflow.com/ was fundamental in helping my to build a data structu
 
 - I got help from this youtube video when starting my project and was very helpful and i took a lot of inspiration from this in my project starting out but later created better ways to run my functions myself. The arrow function is used in my project is from the tutorial. https://www.youtube.com/watch?v=RwFeg0cEZvQ&t=1054s 
 
-- the content on the rules page was taken from https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock
+- The content on the rules page was taken from https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock
 
 ### Media
 
-The images used for this website were taken from https://www.pngaaa.com/download/4532035 and https://www.akshaybahadur.com/post/rock-paper-scissors-lizard-spock.
+- The images used for this website were taken from https://www.pngaaa.com/download/4532035 and https://www.akshaybahadur.com/post/rock-paper-scissors-lizard-spock.
 
-the images for my README.md FILE cropped and edited using paint.
-
+- The images for my README.md FILE cropped and edited using paint.
 
