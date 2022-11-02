@@ -21,13 +21,11 @@ h1 {
 #menu {
     text-align: center;
     display: block;
-
 }
 
 #menu-heading {
     text-decoration: underline;
 }
-
 
 .list {
     display: block;
@@ -49,10 +47,14 @@ h1 {
     border-radius: 50%;
     font-size: 5vw;
     cursor: pointer;
-
 }
 
 /* game page */
+
+#controls-heading {
+    font-size: 2vw;
+    margin: 0 auto;
+}
 
 .selection {
     background-color: yellow;
@@ -76,7 +78,6 @@ h1 {
     height: 55vh;
     text-align: center;
     position: relative;
-
 }
 
 #player {
@@ -86,20 +87,17 @@ h1 {
     height: 55vh;
     text-align: center;
     position: relative;
-
 }
 
 .score {
     text-align: center;
     margin-top: 20px;
-
 }
 
 .game-img {
     min-height: 100%;
     min-width: 100%;
     object-fit: contain;
-
 }
 
 .container {
@@ -119,7 +117,6 @@ h1 {
 #game-buttons {
     text-align: center;
     margin-bottom: 30px;
-
 }
 
 
@@ -146,7 +143,6 @@ h2 {
     margin: 10px;
     text-align: center;
     cursor: pointer;
-
 }
 
 .go-back {
@@ -161,7 +157,6 @@ h2 {
 #rules-intro {
     margin: 20px 50px 50px;
     font-size: 2vw;
-
 }
 
 #rules-list {
@@ -189,14 +184,12 @@ h2 {
 
 #end-page {
     text-align: center;
-
 }
 
 #game-result {
     font-size: 3vw;
     text-align: center;
     margin-bottom: 5%;
-
 }
 
 /* media queries */
@@ -208,6 +201,11 @@ h2 {
 
     h2 {
         margin: 20px 0 20px;
+    }
+
+    #controls-heading {
+        font-size: 2vw;
+        margin: 0 auto;
     }
 
     #rules-intro {
@@ -225,7 +223,6 @@ h2 {
     #rules-list {
         float: none;
         font-size: 4vw;
-
     }
 
     .go-back {
@@ -251,12 +248,26 @@ h2 {
 
     #game-result {
         font-size: 5vw;
+    }
+
+    #exit-rules {
+        margin: 8px 4px 4px 4px;
+        font-size: 3vw;
+    }
 }
 
 /* for small screens 550px wide and down */
 
 @media only screen and (max-width: 550px) {
 
+    #game-buttons {
+        margin: 10px 0;
+    }
+
+    .selection {
+        padding: 5px;
+        margin: 2px;
+    }
 
     .mediaquery {
         font-size: 3vw;
@@ -265,10 +276,4 @@ h2 {
     .score {
         font-size: 3vw;
     }
-
-
-
-
-
 }
-

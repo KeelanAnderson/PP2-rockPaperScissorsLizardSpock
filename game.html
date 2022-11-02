@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="rockPaperScissorsLizardSpock is an expansion on the game Rock, Paper, Scissors.
+    <meta name="description"
+        content="rockPaperScissorsLizardSpock is an expansion on the game Rock, Paper, Scissors.
      Each player picks a variable and reveals it at the same time. The winner is the one who defeats the others. In a tie, the process is repeated until a winner is found.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -13,10 +14,12 @@
 </head>
 
 <body>
-    <h1>rockPaperScissorsLizardSpock</h1>
+    <header>
+        <h1>rockPaperScissorsLizardSpock</h1>
+    </header>
     <section id="game-section">
         <div id="game-buttons">
-            <h2>Controls: </h2>
+            <h2 id="controls-heading">Controls: </h2>
             <br>
             <button class="selection" id="rock" data-selection="rock">Rock</button>
             <button class="selection" id="paper" data-selection="paper"> Paper</button>
@@ -27,13 +30,15 @@
 
         <div id="computer">
             <p class="mediaquery">Computer Choice:</p>
-            <div class="container"><img class="game-img" src="assets/images/rock-image.png" alt="rock" id="computer-choice"></img></div>
+            <div class="container"><img class="game-img" src="assets/images/rock-image.png" alt="rock"
+                    id="computer-choice"></div>
             <p class="score">Computer Score: <span id="computer-score">0</span></p>
         </div>
 
         <div id="player">
             <p class="mediaquery">Player Choice:</p>
-            <div class="container"><img class="game-img" src="assets/images/rock-image.png" alt="rock" id="player-choice"></img></div>
+            <div class="container"><img class="game-img" src="assets/images/rock-image.png" alt="rock"
+                    id="player-choice"></div>
             <p class="score">Player Score: <span id="player-score">0</span></p>
         </div>
 
@@ -41,16 +46,14 @@
             <div id="result"></div>
         </div>
 
-
-
         <p onclick="openMenu()" id="game-exit" class="go-back">Exit Game<i class="fa-solid fa-arrow-left-long"></i></p>
     </section>
 
-    <section  class="hide" id="end-section">
+    <section class="hide" id="end-section">
         <div id="end-page">
 
             <div id="game-result-box">
-                <p id="game-result"></p>
+                <h2 id="game-result">Game Over</h2>
             </div>
 
             <ul>
@@ -59,8 +62,6 @@
                 <li onclick="openMenu()" class="list" id="quit-button"><span class="game-mode-btn">Menu</span></li>
             </ul>
         </div>
-
-
     </section>
 
     <script src="assets/js/script.js"></script>
