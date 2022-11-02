@@ -66,6 +66,10 @@ some other features i would also like to implement is if the images displayed sh
 #### JavaScript
 - No errors were returned when passing through the official JSHint validator
 
+#### Lighthouse
+
+I also analysed my project on lighthouse in dev tools.
+
 ##### Metrics
 
 - There are 11 functions in this file.
@@ -76,7 +80,11 @@ some other features i would also like to implement is if the images displayed sh
 
 - The most complex function has a cyclomatic complexity value of 4 while the median is 1.
 
+
+
 ### Unfixed Bugs
+
+when the game page is first opened a border is displayed in the choice displays before any choice has been made where the images appear after the game has started. I did not fix this feature as i do not think it affects the pages design negatively and how the choice areas more clearly at the start of the game for the user, so I decided to leave it that way.
 
 ## Deployment
 
@@ -98,7 +106,14 @@ I created my Repository on Github and coded the entire project on Gitpod. VSCode
 - The icons used in the rules and game pages were taken from https://fontawesome.com/.
 - The fonts I used were imported from https://fonts.google.com/.
 - The image used to show my website is fuly responsive is taken from https://ui.dev/amiresponsive?.
-- I used https://www.w3schools.com/ and https://stackoverflow.com/ alot throughout my project to help me when I was stuck with how to write my code.
+- I used https://www.w3schools.com/ and https://stackoverflow.com/ a lot throughout my project to help me when I was stuck with how to write my code.
+examples
+-https://www.w3schools.com/howto/howto_js_redirect_webpage.asp. this helped me learn how to redirct to other webpages with javascript.
+
+https://stackoverflow.com/ was fundamental in helping my to build a data structure and the getResult function in my project.
+
+
+- I got help from this youtube video when starting my project and was very helpful and i took a lot of inspiration from this in my project starting out but later created better ways to run my functions myself. The arrow function is used in my project is from the tutorial. https://www.youtube.com/watch?v=RwFeg0cEZvQ&t=1054s 
 
 - the content on the rules page was taken from https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock
 
