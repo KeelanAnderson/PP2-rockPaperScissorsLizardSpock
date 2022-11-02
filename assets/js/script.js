@@ -11,7 +11,6 @@ function openGame() {
     window.location.href = "game.html";
 }
 
-
 function openRules() {
     window.location.href = "rules.html";
 }
@@ -24,9 +23,8 @@ function endGame() {
     let gameOn = document.getElementById('game-section');
     gameOn.hidden = true;
     let gameOver = document.getElementById('end-section');
-    gameOver.classList.remove('hide')
+    gameOver.classList.remove('hide');
 }
-
 
 gameButtons.forEach(gameButton => gameButton.addEventListener('click', (e) => {
     userChoice = e.target.dataset;
@@ -35,7 +33,6 @@ gameButtons.forEach(gameButton => gameButton.addEventListener('click', (e) => {
     getResult();
     bestOfFive();
 }));
-
 
 function generateComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 5);
@@ -55,7 +52,7 @@ const options = {
 
 function getResult() {
     generateComputerChoice();
-    beatenArray = options[userChoice.selection];
+    let beatenArray = options[userChoice.selection];
     let answer = beatenArray.includes(computerChoice);
     if (computerChoice == userChoice.selection) {
         result = "It's A Draw!";
@@ -66,7 +63,6 @@ function getResult() {
         result = 'You Lose!';
         incrementComputerScore();
     }
-
     resultDisplay.innerHTML = result;
 }
 
@@ -82,7 +78,7 @@ function incrementComputerScore() {
     document.getElementById('computer-score').innerText = ++computerScore;
 }
 
-// best of three 
+// best of Five 
 
 function bestOfFive() {
     let gameResult = document.getElementById('game-result');

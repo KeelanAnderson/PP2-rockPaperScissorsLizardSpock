@@ -24,6 +24,10 @@ h1 {
 
 }
 
+#menu-heading {
+    text-decoration: underline;
+}
+
 
 .list {
     display: block;
@@ -208,6 +212,7 @@ h2 {
 
     #rules-intro {
         margin: 0 8% 10px;
+        font-size: 4vw
     }
 
     #rules-diagram {
@@ -243,6 +248,9 @@ h2 {
     .score {
         font-size: 2vw;
     }
+
+    #game-result {
+        font-size: 5vw;
 }
 
 /* for small screens 550px wide and down */
