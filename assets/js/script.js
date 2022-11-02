@@ -7,17 +7,25 @@ let userChoice;
 let computerChoice;
 let result;
 
+/** opens game page */
+
 function openGame() {
     window.location.href = "game.html";
 }
+
+/** opens Rules page */
 
 function openRules() {
     window.location.href = "rules.html";
 }
 
+/** opens Menu page */
+
 function openMenu() {
     window.location.href = "index.html";
 }
+
+/** this function will hide the game section and displays the gameover section */
 
 function endGame() {
     let gameOn = document.getElementById('game-section');
@@ -26,6 +34,12 @@ function endGame() {
     gameOver.classList.remove('hide');
 }
 
+/** 
+ * This is the main game function.
+ * It add evet listeners to all  the game buttons
+ * when clicked displayes the image of the chosen button and calls the rest of the game functions
+ */
+
 gameButtons.forEach(gameButton => gameButton.addEventListener('click', (e) => {
     userChoice = e.target.dataset;
     playerChoiceDisplay.setAttribute("src", `assets/images/${e.target.id}-image.png`); // sets the images for players choice
@@ -33,6 +47,12 @@ gameButtons.forEach(gameButton => gameButton.addEventListener('click', (e) => {
     getResult();
     bestOfFive();
 }));
+
+/** 
+ * generates a random number between 0 - 4
+ * this is used to pull a random computer choice from an array
+ * its sets an image for that choice in computer choice display
+ */
 
 function generateComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 5);
@@ -50,6 +70,11 @@ const options = {
     'spock': ['scissors', 'rock'],
 };
 
+/**
+ * determines the result for each round
+ * it also gives a point to the winner of the round
+ */
+
 function getResult() {
     generateComputerChoice();
     let beatenArray = options[userChoice.selection];
@@ -66,7 +91,7 @@ function getResult() {
     resultDisplay.innerHTML = result;
 }
 
-//increment score for computer and player
+/** increment score for computer and player */
 
 function incrementPlayerScore() {
     let playerScore = parseInt(document.getElementById('player-score').innerText);
@@ -78,7 +103,12 @@ function incrementComputerScore() {
     document.getElementById('computer-score').innerText = ++computerScore;
 }
 
-// best of Five 
+/** 
+ * determines the winner of the overall game of best of five 
+ * the first to win 3 rouns is the winner
+ * calls to end game function to end the game
+ * and provides information on who the winner is after the game
+ */
 
 function bestOfFive() {
     let gameResult = document.getElementById('game-result');
