@@ -92,6 +92,8 @@ some other features I would also like to implement is if the images displayed sh
 
 I also analysed my project on lighthouse in dev tools.
 
+![ lighthouse image ](/readme-images/rpsls-lighthouse.jpg "Text to show on mouseover")
+
 ##### Metrics
 
 - There are 11 functions in this file.
@@ -107,6 +109,8 @@ I also analysed my project on lighthouse in dev tools.
 ### Unfixed Bugs
 
 when the game page is first opened a border is displayed in the choice displays before any choice has been made where the images appear after the game has started. I did not fix this feature as i do not think it affects the pages design negatively and how the choice areas more clearly at the start of the game for the user, so I decided to leave it that way.
+
+I later changed this when I ran the project through lighthouse as it was bringing down my accessibility score as there was no image and therefore alt tag. I fixed this issue by setting the default images as the rock image for the start of the game, I would later like to find a better alternative to this.
 
 ## Deployment
 
@@ -134,6 +138,11 @@ examples
 
 https://stackoverflow.com/ was fundamental in helping my to build a data structure and the getResult function in my project.
 
+#### Validators
+
+- https://jshint.com/ for JavaScript
+- https://jigsaw.w3.org/css-validator/ for CSS
+- https://validator.w3.org/ for HTML
 
 - I got help from this youtube video when starting my project and was very helpful and i took a lot of inspiration from this in my project starting out but later created better ways to run my functions myself. The arrow function is used in my project is from the tutorial. https://www.youtube.com/watch?v=RwFeg0cEZvQ&t=1054s 
 
